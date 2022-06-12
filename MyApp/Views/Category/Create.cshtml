@@ -1,0 +1,33 @@
+﻿@using MyWebApp.Models
+@model Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="border border-dark border-1 rounded p-2">
+    <div class="fs-2 fw-bold text-center">
+        Enter your Category Data
+    </div>
+    <form class="text-center" method="post">
+      <div class="mb-3">
+        <input type="text" class="form-control" asp-for="Name" id="Name" placeholder="Enter Name"/>
+        <span asp-validation-for="Name" class="text-danger text-start"></span>  
+    </div>
+      <div class="mb-3">
+        <input type="number" class="form-control" id="DisplayOrder" asp-for="DisplayOrder" placeholder="Enter Create-Oder"/>
+        <span asp-validation-for="DisplayOrder" class="text-danger text-start"></span>    
+    </div>
+      <div asp-validation-summary="All" class="text-danger text-start"></div>    
+      <button type="submit" class="btn btn-primary container">Submit</button>
+
+    </form>
+</div>
+<div class="text-center mt-3">
+    <a class="btn btn-outline-danger rounded-pill" asp-action="Index" asp-controller="Category"><i class="bi bi-arrow-bar-left"></i>&nbsp; Back</a>
+</div>
+
+@section scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

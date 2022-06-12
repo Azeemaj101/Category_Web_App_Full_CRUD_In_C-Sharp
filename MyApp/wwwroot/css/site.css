@@ -1,0 +1,25 @@
+html {
+  font-size: 14px;
+}
+body{
+    background-color:#00b964;
+    color:white;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
